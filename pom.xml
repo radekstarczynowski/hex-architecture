@@ -16,6 +16,7 @@
         <module>books-configuration-springboot</module>
         <module>books-configuration-quarkus</module>
         <module>books-adapter-in-quarkus</module>
+        <module>books-adapter-out-jdbi</module>
     </modules>
 
     <properties>
@@ -28,6 +29,7 @@
         <org.springframework.version>5.3.15</org.springframework.version>
         <org.springframework.boot.version>2.6.3</org.springframework.boot.version>
         <quarkus.platform.version>2.7.0.Final</quarkus.platform.version>
+        <org.jdbi.version>3.27.0</org.jdbi.version>
     </properties>
 
     <dependencies>

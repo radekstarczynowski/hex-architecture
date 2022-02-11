@@ -1,0 +1,14 @@
+services:
+
+  database:
+    image: 'postgres:latest'
+    container_name: postgres-books
+    restart: always
+    environment:
+      - POSTGRES_USER=books
+      - POSTGRES_PASSWORD=books
+      - POSTGRES_DB=books
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres:/var/lib/postgresql/data
