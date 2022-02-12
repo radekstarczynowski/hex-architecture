@@ -19,8 +19,17 @@
 
     <dependencies>
         <dependency>
+            <groupId>pro.cleancoder</groupId>
+            <artifactId>application</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.jdbi</groupId>
             <artifactId>jdbi3-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.jdbi</groupId>
+            <artifactId>jdbi3-sqlobject</artifactId>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>

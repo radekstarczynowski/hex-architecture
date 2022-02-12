@@ -14,14 +14,30 @@
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
+        <com.zaxxer.version>5.0.1</com.zaxxer.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>pro.cleancoder</groupId>
+            <artifactId>application</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>pro.cleancoder</groupId>
             <artifactId>books-adapter-in-quarkus</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
+        <dependency>
+            <groupId>pro.cleancoder</groupId>
+            <artifactId>books-adapter-out-jdbi</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>com.zaxxer</groupId>-->
+        <!--            <artifactId>HikariCP</artifactId>-->
+        <!--            <version>${com.zaxxer.version}</version>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-resteasy</artifactId>
@@ -29,6 +45,14 @@
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-resteasy-jackson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-jdbc-postgresql</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-agroal</artifactId>
         </dependency>
         <dependency>
             <groupId>io.quarkus</groupId>
