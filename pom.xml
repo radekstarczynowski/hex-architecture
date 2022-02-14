@@ -29,14 +29,14 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
-        <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
         <lombok.version>1.18.22</lombok.version>
-        <org.springframework.version>5.3.15</org.springframework.version>
-        <org.springframework.boot.version>2.6.3</org.springframework.boot.version>
+        <springframework.version>5.3.15</springframework.version>
+        <springframework.boot.version>2.6.3</springframework.boot.version>
         <quarkus.platform.version>2.7.0.Final</quarkus.platform.version>
-        <org.jdbi.version>3.27.0</org.jdbi.version>
-        <io.micronaut.version>3.3.1</io.micronaut.version>
-        <io.micronaut.plugin.version>3.1.1</io.micronaut.plugin.version>
+        <jdbi.version>3.27.0</jdbi.version>
+        <micronaut.version>3.3.1</micronaut.version>
+        <micronaut.plugin.version>3.1.1</micronaut.plugin.version>
     </properties>
 
     <dependencies>

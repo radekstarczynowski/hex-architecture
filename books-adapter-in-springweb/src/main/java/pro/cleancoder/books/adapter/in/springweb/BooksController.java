@@ -1,4 +1,4 @@
-package pro.cleancoder.books.adapter.in;
+package pro.cleancoder.books.adapter.in.springweb;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

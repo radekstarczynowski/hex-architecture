@@ -38,7 +38,7 @@
                 <groupId>org.jdbi</groupId>
                 <artifactId>jdbi3-bom</artifactId>
                 <type>pom</type>
-                <version>${org.jdbi.version}</version>
+                <version>${jdbi.version}</version>
                 <scope>import</scope>
             </dependency>
         </dependencies>

@@ -2,7 +2,7 @@ package pro.cleancoder.books.port.out.jpa;
 
 import pro.cleancoder.books.Book;
 
-public class BookMapper {
+class BookMapper {
 
     BookEntity map(Book book) {
         return BookEntity.builder()
