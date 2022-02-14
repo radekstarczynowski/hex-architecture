@@ -1,24 +1,24 @@
-package pro.cleancoder;
+package pro.cleancoder.books;
 
-import io.micronaut.context.annotation.Bean;
-import io.micronaut.context.annotation.Factory;
-import pro.cleancoder.books.BookMapper;
-import pro.cleancoder.books.BooksRepository;
+import io.agroal.api.AgroalDataSource;
+import pro.cleancoder.books.port.out.BookMapper;
+import pro.cleancoder.books.port.out.BooksRepository;
 import pro.cleancoder.books.port.in.CreateBookUseCase;
 import pro.cleancoder.books.port.out.CreateBookPort;
 import pro.cleancoder.books.service.CreateBookService;
 
-import javax.sql.DataSource;
+import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.inject.Produces;
 
-@Factory
+@ApplicationScoped
 class ApplicationConfiguration {
 
-    @Bean
-    public CreateBookPort createBookPort(DataSource dataSource) {
+    @Produces
+    public CreateBookPort createBookPort(AgroalDataSource dataSource) {
         return new BooksRepository(dataSource, new BookMapper());
     }
 
-    @Bean
+    @Produces
     public CreateBookUseCase createBookUseCase(CreateBookPort createBookPort) {
         return new CreateBookService(createBookPort);
     }

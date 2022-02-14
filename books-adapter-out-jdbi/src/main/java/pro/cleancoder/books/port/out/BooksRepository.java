@@ -1,8 +1,8 @@
-package pro.cleancoder.books;
+package pro.cleancoder.books.port.out;
 
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
-import pro.cleancoder.books.port.out.CreateBookPort;
+import pro.cleancoder.books.Book;
 
 import javax.sql.DataSource;
 

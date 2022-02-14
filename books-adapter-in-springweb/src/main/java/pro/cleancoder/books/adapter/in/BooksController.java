@@ -1,5 +1,6 @@
 package pro.cleancoder.books.adapter.in;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,13 +12,10 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/books")
+@RequiredArgsConstructor
 class BooksController {
 
     private final CreateBookUseCase createBookUseCase;
-
-    public BooksController(CreateBookUseCase createBookUseCase) {
-        this.createBookUseCase = createBookUseCase;
-    }
 
     @PostMapping
     public UUID createBook(@RequestBody CreateBookResource resource) {

@@ -1,4 +1,4 @@
-package pro.cleancoder.books;
+package pro.cleancoder.books.port.out;
 
 import lombok.Builder;
 import lombok.Getter;

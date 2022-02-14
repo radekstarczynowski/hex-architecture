@@ -1,4 +1,6 @@
-package pro.cleancoder.books;
+package pro.cleancoder.books.port.out;
+
+import pro.cleancoder.books.Book;
 
 public class BookMapper {
 
