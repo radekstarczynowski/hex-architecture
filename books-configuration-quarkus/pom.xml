@@ -33,11 +33,6 @@
             <artifactId>books-adapter-out-jdbi</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
-        <!--        <dependency>-->
-        <!--            <groupId>com.zaxxer</groupId>-->
-        <!--            <artifactId>HikariCP</artifactId>-->
-        <!--            <version>${com.zaxxer.version}</version>-->
-        <!--        </dependency>-->
         <dependency>
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-resteasy</artifactId>

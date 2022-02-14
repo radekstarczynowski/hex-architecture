@@ -17,10 +17,13 @@
         <module>books-configuration-quarkus</module>
         <module>books-adapter-in-quarkus</module>
         <module>books-adapter-out-jdbi</module>
+        <module>books-configuration-micronaut</module>
+        <module>books-adapter-in-micronaut</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.version>3.8.1</maven.compiler.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
@@ -30,6 +33,8 @@
         <org.springframework.boot.version>2.6.3</org.springframework.boot.version>
         <quarkus.platform.version>2.7.0.Final</quarkus.platform.version>
         <org.jdbi.version>3.27.0</org.jdbi.version>
+        <io.micronaut.version>3.3.1</io.micronaut.version>
+        <io.micronaut.plugin.version>3.1.1</io.micronaut.plugin.version>
     </properties>
 
     <dependencies>

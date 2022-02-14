@@ -1,0 +1,22 @@
+micronaut:
+  server:
+    port: 8085
+  application:
+    name: booksConfigurationMicronaut
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/books
+    driverClassName: org.postgresql.Driver
+    username: books
+    password: books
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+endpoints:
+  all:
+    enabled: true
+    sensitive: false
+  stop:
+    enabled: false
