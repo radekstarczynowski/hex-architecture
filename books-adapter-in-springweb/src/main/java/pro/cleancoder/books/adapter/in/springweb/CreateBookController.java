@@ -13,7 +13,7 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/books")
 @RequiredArgsConstructor
-class BooksController {
+class CreateBookController {
 
     private final CreateBookUseCase createBookUseCase;
 

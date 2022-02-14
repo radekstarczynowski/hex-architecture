@@ -2,6 +2,7 @@ package pro.cleancoder.books.port.out.jpa;
 
 import lombok.RequiredArgsConstructor;
 import pro.cleancoder.books.port.out.CreateBookPort;
+import pro.cleancoder.books.port.out.FindBooksPort;
 
 import javax.persistence.EntityManagerFactory;
 
@@ -9,14 +10,14 @@ import javax.persistence.EntityManagerFactory;
 public class RepositoryConfiguration {
 
     private final EntityManagerFactory entityManagerFactory;
+    private final BookMapper bookMapper = new BookMapper();
 
-    public CreateBookPort createBooksRepository() {
-        var bookMapper = createBookMapper();
-        return new BookRepositoryImpl(entityManagerFactory, bookMapper);
+    public CreateBookPort createCommandBooksRepository() {
+        return new CommandBookRepository(entityManagerFactory, bookMapper);
     }
 
-    protected BookMapper createBookMapper() {
-        return new BookMapper();
+    public FindBooksPort createQueryBooksRepository() {
+        return new QueryBookRepository(entityManagerFactory, bookMapper);
     }
 
 }

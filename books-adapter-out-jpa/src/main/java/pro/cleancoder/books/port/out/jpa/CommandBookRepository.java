@@ -7,7 +7,7 @@ import pro.cleancoder.books.port.out.CreateBookPort;
 import javax.persistence.EntityManagerFactory;
 
 @RequiredArgsConstructor
-class BookRepositoryImpl implements CreateBookPort {
+class CommandBookRepository implements CreateBookPort {
 
     private final EntityManagerFactory entityManagerFactory;
     private final BookMapper bookMapper;
