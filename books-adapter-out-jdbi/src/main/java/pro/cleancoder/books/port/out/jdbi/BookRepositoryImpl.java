@@ -1,17 +1,18 @@
-package pro.cleancoder.books.port.out;
+package pro.cleancoder.books.port.out.jdbi;
 
 import org.jdbi.v3.core.Jdbi;
 import org.jdbi.v3.sqlobject.SqlObjectPlugin;
 import pro.cleancoder.books.Book;
+import pro.cleancoder.books.port.out.CreateBookPort;
 
 import javax.sql.DataSource;
 
-public class BooksRepository implements CreateBookPort {
+class BookRepositoryImpl implements CreateBookPort {
 
     private final Jdbi jdbi;
     private final BookMapper bookMapper;
 
-    public BooksRepository(DataSource dataSource, BookMapper bookMapper) {
+    BookRepositoryImpl(DataSource dataSource, BookMapper bookMapper) {
         this.jdbi = Jdbi.create(dataSource);
         this.bookMapper = bookMapper;
         this.jdbi.installPlugin(new SqlObjectPlugin());

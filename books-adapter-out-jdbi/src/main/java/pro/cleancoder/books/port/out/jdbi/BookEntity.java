@@ -1,4 +1,4 @@
-package pro.cleancoder.books.port.out;
+package pro.cleancoder.books.port.out.jdbi;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Getter
 @Builder
-public class BookEntity {
+class BookEntity {
 
     private final UUID uuid;
     private final String author;

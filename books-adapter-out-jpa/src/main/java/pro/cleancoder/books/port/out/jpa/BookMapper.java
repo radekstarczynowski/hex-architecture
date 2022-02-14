@@ -1,4 +1,4 @@
-package pro.cleancoder.books.port.out;
+package pro.cleancoder.books.port.out.jpa;
 
 import pro.cleancoder.books.Book;
 

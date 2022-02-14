@@ -19,6 +19,8 @@
         <module>books-adapter-out-jdbi</module>
         <module>books-configuration-micronaut</module>
         <module>books-adapter-in-micronaut</module>
+        <module>books-adapter-out-jpa</module>
+        <module>books-database</module>
     </modules>
 
     <properties>
