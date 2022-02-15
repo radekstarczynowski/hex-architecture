@@ -1,3 +1,5 @@
 package pro.cleancoder.books.adapter.in.springweb;
 
-record BookBasicInfo(String title, String author, String gender) {}
+import java.util.UUID;
+
+record BookBasicInfo(UUID uuid, String title, String author, String gender) {}

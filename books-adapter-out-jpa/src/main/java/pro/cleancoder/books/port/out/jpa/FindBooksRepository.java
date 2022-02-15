@@ -10,13 +10,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import java.util.List;
 
 @RequiredArgsConstructor
-class QueryBookRepository implements FindBooksPort {
+class FindBooksRepository implements FindBooksPort {
 
     private final EntityManagerFactory entityManagerFactory;
     private final BookMapper bookMapper;
@@ -29,7 +28,7 @@ class QueryBookRepository implements FindBooksPort {
         var books = getAndMapBooks(findBooksQuery);
 
         var numberOfBooks = countBooksQuery(criteria, entityManager)
-                                    .getSingleResult();
+                .getSingleResult();
 
         return new FindBooksResult(books, numberOfBooks);
     }
@@ -75,4 +74,5 @@ class QueryBookRepository implements FindBooksPort {
                          .map(bookMapper::map)
                          .toList();
     }
+
 }

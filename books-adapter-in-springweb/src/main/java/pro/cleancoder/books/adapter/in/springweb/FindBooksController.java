@@ -29,6 +29,7 @@ class FindBooksController {
         return books.books()
                     .stream()
                     .map(book -> new BookBasicInfo(
+                            book.getUuid(),
                             book.getBookInfo().getTitle(),
                             book.getBookInfo().getAuthor(),
                             book.getBookInfo().getGender()

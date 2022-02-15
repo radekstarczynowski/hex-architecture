@@ -32,3 +32,10 @@ GET http://localhost:8080/books?title=The%20Great%20Gatsby
 ###
 
 GET http://localhost:8080/books?title=The%20Great%20Gatsby&pageNumber=0&pageSize=1
+###
+
+GET http://localhost:8080/books
+###
+
+GET http://localhost:8080/books/6179b76c-a80e-4f80-abd5-29985b83decf
+###
