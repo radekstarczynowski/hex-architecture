@@ -73,6 +73,13 @@
                 <groupId>io.quarkus</groupId>
                 <artifactId>quarkus-maven-plugin</artifactId>
                 <version>${quarkus.platform.version}</version>
+                <configuration>
+                    <compilerArgs>
+                        <!-- Needed for compiler to emit constructor parameter names to use it with reflection (Jdbi) -->
+                        <!-- needed here for dev mode -->
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
                 <extensions>true</extensions>
                 <executions>
                     <execution>

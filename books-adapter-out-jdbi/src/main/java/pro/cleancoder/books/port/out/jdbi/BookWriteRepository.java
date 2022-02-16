@@ -7,12 +7,12 @@ import pro.cleancoder.books.port.out.CreateBookPort;
 
 import javax.sql.DataSource;
 
-class BookRepositoryImpl implements CreateBookPort {
+public class BookWriteRepository implements CreateBookPort {
 
     private final Jdbi jdbi;
     private final BookMapper bookMapper;
 
-    BookRepositoryImpl(DataSource dataSource, BookMapper bookMapper) {
+    public BookWriteRepository(DataSource dataSource, BookMapper bookMapper) {
         this.jdbi = Jdbi.create(dataSource);
         this.bookMapper = bookMapper;
         this.jdbi.installPlugin(new SqlObjectPlugin());
@@ -22,7 +22,7 @@ class BookRepositoryImpl implements CreateBookPort {
     public Book createBook(Book book) {
         var entity = bookMapper.map(book);
         jdbi.useExtension(
-                BooksInsertRepository.class,
+                BooksCommandRepository.class,
                 repository -> repository.insert(entity));
         return book;
     }

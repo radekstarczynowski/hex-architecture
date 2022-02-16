@@ -15,7 +15,7 @@ class ApplicationConfiguration {
     @Bean
     public CreateBookPort createBookPort(DataSource dataSource) {
         var configuration = new RepositoryConfiguration(dataSource);
-        return configuration.createBooksRepository();
+        return configuration.createBookWriteRepository();
     }
 
     @Bean

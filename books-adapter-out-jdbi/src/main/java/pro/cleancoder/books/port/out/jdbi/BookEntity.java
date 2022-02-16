@@ -7,11 +7,17 @@ import java.util.UUID;
 
 @Getter
 @Builder
-class BookEntity {
+public class BookEntity {
 
-    private final UUID uuid;
-    private final String author;
-    private final String title;
-    private final String gender;
+    private UUID uuid;
+    private String author;
+    private String title;
+    private String gender;
 
+    public BookEntity(UUID uuid, String author, String title, String gender) {
+        this.uuid = uuid;
+        this.author = author;
+        this.title = title;
+        this.gender = gender;
+    }
 }
