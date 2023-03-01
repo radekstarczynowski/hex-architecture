@@ -1,6 +1,7 @@
 package pro.cleancoder.books.adapter.in.quarkus;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import pro.cleancoder.books.port.in.CreateBookCommand;
 import pro.cleancoder.books.port.in.CreateBookUseCase;
 
@@ -11,6 +12,7 @@ import java.util.UUID;
 
 @Path("/books")
 @RequiredArgsConstructor
+@Slf4j
 public class CreateBookController {
 
     private final CreateBookUseCase createBookUseCase;
